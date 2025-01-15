@@ -4,189 +4,67 @@ import styled from "styled-components";
 export const Root = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 2rem;
-  background: linear-gradient(180deg, ${(props) => props.theme['gray-700']} 0%, ${(props) => props.theme['gray-700']} 30%,${(props) => props.theme['green-100']} 100%);
-  font-family: 'Roboto', sans-serif;
+  align-items: center; // Centraliza verticalmente
+  justify-content: center; // Centraliza horizontalmente
+  background: ${(props) => props.theme['blue']};
+  border-radius: 0 0 10px 10px;
+`;
 
-  @media (min-width: 760px) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-`
-
-export const HeaderContent = styled.div`
-  width: 100%;
+// CONTENT - Contêiner do conteúdo
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0.5rem;
-  gap: 1rem;
+  align-items: center; // Centraliza os itens horizontalmente
+  text-align: center; // Ajusta o alinhamento do texto para o centro
+  gap: 1rem; // Espaçamento entre os elementos
+  width: 100%;
+  max-width: 60rem;
+  padding: 0 1rem; // Margem interna para telas pequenas
 
   @media (min-width: 760px) {
-    gap: 3rem;
-    max-width: 1600px;
+    padding: 0; // Remove o padding em telas maiores
+    text-align: left; // Alinha o texto à esquerda
   }
-`
+`;
 
-// LOGO
+// LOGO - Área do Logo
 export const Logo = styled.div`
-  font-size: 1.6rem;
-  margin: 1rem;
-  color: ${(props) => props.theme['white-ice']};
-  z-index: 2;
-  white-space: nowrap;
-  @media (min-width: 760px) {
-    font-size: 2rem;
-    margin-right: 2rem;
-  }
-`
+  img {
+    height: 8rem; // Ajuste conforme necessário
+    width: auto;
 
-export const NavSearch = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  
-  @media (min-width: 760px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`
-
-// NAVIGATION - Ícones sociais
-export const Navigation = styled.ul`
-  display: flex;
-  gap: 2rem;
-  color: ${(props) => props.theme['green-300']};
-  li {
-    font-size: 2.8rem;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    
-
-    &:hover {
-      transform: scale(0.9);
+    @media (max-width: 480px) {
+      height: 6rem; // Reduz o tamanho do logo em telas pequenas
     }
   }
+`;
 
-    @media (min-width: 760px) {
-      gap: 3rem;
-      li{
-        font-size: 3.5rem;
-    }
-  }
-`
+// TITLE - Texto do Header
+export const Title = styled.h1`
+  font-size: 1.8rem;
+  color: ${(props) => props.theme['gray']};
 
-export const NavMobile = styled.div`
-   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Garante que os itens fiquem um em cada canto */
-  padding: 0 .5rem; /* Espaço lateral de 1rem */
-  gap: 8rem;
-  
-  @media (max-width: 760px) {
-    flex-direction: row; /* Itens ficam lado a lado */
-    width: 100%;
-  }
-`
-
-// MENU DESKTOP
-export const Menu = styled.ul`
-  width: 100%;
-  display: none;
-  justify-content: space-between;
-  gap: 1.5rem;
-  color: ${(props) => props.theme['white-ice']};
-  white-space: nowrap;
-
-  li {
-    cursor: pointer;
-    font-size: 1.8rem;
+  strong {
+    color: ${(props) => props.theme['orange']};
     position: relative;
-    transition: transform 0.3s ease-in-out;
-    border-bottom: 4px solid transparent;
 
-    &:hover {
-      transform: scale(1.1);
-      border-bottom: 4px solid ${(props) => props.theme['blue-200']};
+    // Conteúdo extra e brilho suave
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      border-radius: 50%;
+      background: ${(props) => props.theme['orange']};
+      opacity: 0.3; // Brilho suave
+      filter: blur(2rem);
     }
   }
-  
-  @media (min-width: 760px) {
-    display: flex;
-  }
-`
-
-// HAMBURGER MENU
-export const Hamburger = styled.div`
-  display: flex;
-  cursor: pointer;
-  z-index: 3;
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  color: ${(props) => props.theme['green-300']};
-  
 
   @media (min-width: 760px) {
-    display: none;
+    font-size: 2.5rem; // Aumenta o tamanho da fonte em telas maiores
   }
-`
-
-// MOBILE MENU
-interface MobileMenuProps {
-  $isOpen: boolean;
-}
-
-export const MobileMenu = styled.ul<MobileMenuProps>`
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
-  width: 60%;
-  height: 100%;
-  background: ${(props) => props.theme['gray-800']};
-  padding: 4rem 2rem;
-  transition: right 0.3s ease-in-out;
-  z-index: 10;
-
-  li {
-    color: #FFF;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid ${(props) => props.theme['green-300']};
-
-    &:last-child {
-      border: none;
-    }
-  }
-
-  @media (max-width: 600px) {
-    gap: 1rem;
-
-    li {
-      font-size: 1.3rem;
-    }
-  }
-`
-
-// FUNDO CINZA AO ABRIR MOBILE MENU
-interface BackdropProps {
-  $isOpen: boolean;
-}
-
-export const Backdrop = styled.div<BackdropProps>`
-  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9;
-`
+`;

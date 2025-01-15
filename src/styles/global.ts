@@ -18,11 +18,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-track {
-      background: ${(props) => props.theme['gray-700']};
+      background: ${(props) => props.theme['beige']};
     }
 
     ::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme['wine-500']}; /* Cor da barra */
+      background: ${(props) => props.theme['orange']}; /* Cor da barra */
       border-radius: 10px; /* Cantos arredondados */
     }
 
@@ -37,11 +37,11 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: ${(props) => props.theme['green-100']};
+    background-color: ${(props) => props.theme['beige']};
   }
 
   body, input, textarea, button{
-    font-family: 'PT Serif', sans-serif;
+    font-family: 'sans-serif', sans-serif;
     font-weight: 400;
     font-size: 1rem;
   }
