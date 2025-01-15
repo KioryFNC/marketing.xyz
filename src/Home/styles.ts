@@ -1,72 +1,124 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  font-family: 'Arial', sans-serif;
-  color: ${(props) => props.theme['gray']};
+  width: 100%;
 `;
 
 export const Section = styled.section`
   padding: 4rem 2rem;
-  background: ${(props) => props.theme['soft-beige']};
   margin: 2rem 0;
   border-radius: 8px;
+  border: 1px solid ${(props) => props.theme['gray']};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.beige {
+    background-color: ${(props) => props.theme['beige']};
+  }
+  &.orange {
+    background-color: ${(props) => props.theme['orange']};
+  }
+
+  &.gray {
+    background-color: ${(props) => props.theme['gray']};
+  }
+  &.red {
+    background-color: ${(props) => props.theme['red']};
+  }
+  &.blue {
+    background-color: ${(props) => props.theme['blue']};
+  }
+
+  @media (min-width: 760px) {
+    padding: 6rem 4rem;
+  }
+`;
+
+
+export const Content = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
 
   h2 {
-    font-size: 2.5rem; /* Aumentado para maior destaque */
-    color: ${(props) => props.theme['red']};
+    font-size: 2.5rem;
+    color: var(--red);
     margin-bottom: 1.5rem;
   }
 
   p {
-    font-size: 1.8rem; /* Texto maior */
-    line-height: 1.8;
-    margin: 1rem 0;
+    font-size: 1.8rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
   }
 
   ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
 
     li {
-      font-size: 1.6rem; /* Maior para listas */
-      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin: 1rem 0;
 
-      strong {
-        color: ${(props) => props.theme['orange']};
+      svg {
+        margin-right: 1rem;
+        color: var(--orange);
       }
     }
+  }
+`;
+export const Image = styled.img`
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+`;
 
+export const Text = styled.div`
+  flex: 1;
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme['gray']};
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
-  button {
-    background: ${(props) => props.theme['red']};
-    color: ${(props) => props.theme['white']};
-    padding: 1rem 2rem; /* Botão maior */
-    font-size: 1.6rem; /* Texto do botão maior */
-    margin-top: 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-
-    &:hover {
-      background: ${(props) => props.theme['orange']};
-    }
+  p, ul, blockquote, cite {
+    margin-bottom: 1rem;
   }
 
-  blockquote {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    background: ${(props) => props.theme['gray']};
-    color: ${(props) => props.theme['white']};
-    border-radius: 4px;
-    font-size: 1.4rem; /* Texto maior */
-    line-height: 1.8;
+  ul {
+    list-style: none;
+    padding: 0;
 
-    cite {
-      display: block;
-      margin-top: 0.5rem;
-      color: ${(props) => props.theme['slate-blue']};
-      font-size: 1.2rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+  }
+`;
+
+export const Button = styled.button`
+  padding: 1rem 2rem;
+  background: ${({ theme }) => theme['red']};
+  color: ${({ theme }) => theme['white']};
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: ${({ theme }) => theme['orange']};
   }
 `;
