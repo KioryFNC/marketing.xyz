@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import * as Element from './styles';
-import { BookOpen, ChartBar, Globe, Lightning, Phone } from 'phosphor-react';
+import { BookOpen, ChartBar, Check, Globe, Lightning, Phone } from 'phosphor-react';
 import section1 from '../assets/section1.jpg'
 import section2 from '../assets/section2.jpg'
 import section3 from '../assets/section3.jpg'
@@ -19,8 +19,8 @@ export function Home() {
       <Header />
 
       {/* Section 1 */}
-      <Element.Section className="beige">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Image src={section1} alt="High-Intent Leads" />
           <Element.Text>
             <h2>High-Intent Leads Delivered Directly to Your Pipeline</h2>
@@ -37,8 +37,8 @@ export function Home() {
       </Element.Section>
 
       {/* Section 2 */}
-      <Element.Section className="blue">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Text>
             <h2>We Deliver Results, Not Promises</h2>
             <p>
@@ -61,8 +61,8 @@ export function Home() {
       </Element.Section>
 
       {/* Section 3 */}
-      <Element.Section className="blue">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Image src={section3} alt="We Deliver Results" />
           <Element.Text>
             <h2>Comprehensive End-to-End Lead Generation</h2>
@@ -91,8 +91,8 @@ export function Home() {
       </Element.Section>
 
       {/* Section 4 */}
-      <Element.Section className="orange">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Text>
             <h2>Why Choose Marketing.xyz?</h2>
             <p>
@@ -115,8 +115,8 @@ export function Home() {
       </Element.Section>
 
       {/* Section 5 */}
-      <Element.Section className="orange">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Image src={section5} alt="Tailored Content for High-Intent Lead Capture " />
           <Element.Text>
             <h2>Tailored Content for High-Intent Lead Capture </h2>
@@ -125,31 +125,31 @@ export function Home() {
             </p>
             <ul>
               <li>
-                 <strong>Guides and eBooks</strong>
+              <Check size={24}/> <strong>Guides and eBooks</strong> 
               </li>
               <li>
-                <strong>Industry Insights Reports</strong> 
+              <Check size={24}/> <strong>Industry Insights Reports</strong> 
               </li>
               <li>
-                <strong>Infographics & Visual Guides </strong> 
+                <Check size={24}/> <strong>Infographics & Visual Guides </strong> 
               </li>
               <li>
-                 <strong>Glossary of Industry Terms</strong>
+                 <Check size={24}/> <strong>Glossary of Industry Terms</strong>
               </li>
               <li>
-                <strong>Checklist for Best Practices</strong> 
+                <Check size={24}/> <strong>Checklist for Best Practices</strong> 
               </li>
               <li>
-                <strong>Trend Spotting Forecast </strong> 
+                <Check size={24}/> <strong>Trend Spotting Forecast </strong> 
               </li>
               <li>
-                 <strong>Templates and Toolkits </strong>
+                <Check size={24}/> <strong>Templates and Toolkits </strong>
               </li>
               <li>
-                <strong>Competitive Landscape </strong> 
+                <Check size={24}/> <strong>Competitive Landscape </strong> 
               </li>
               <li>
-                <strong>Whitepapers </strong> 
+                <Check size={24}/> <strong>Whitepapers </strong> 
               </li>
             </ul>
           </Element.Text>
@@ -157,8 +157,8 @@ export function Home() {
       </Element.Section>
 
          {/* Section 6 */}
-         <Element.Section className="orange">
-        <Element.Content>
+         <Element.Section>
+        <Element.Content className="blue">
           <Element.Text>
             <h2>How We Deliver High-Quality Leads</h2>
             <p>
@@ -182,8 +182,8 @@ export function Home() {
       </Element.Section>
 
          {/* Section 7 */}
-         <Element.Section className="orange">
-        <Element.Content>
+         <Element.Section >
+        <Element.Content className="blue">
           <Element.Image src={section7} alt="What Sets Us Apart?" />
           <Element.Text>
             <h2>What Sets Us Apart?</h2>
@@ -206,8 +206,8 @@ export function Home() {
       </Element.Section>
 
          {/* Section 8 */}
-         <Element.Section className="orange">
-        <Element.Content>
+         <Element.Section >
+        <Element.Content className="blue">
           <Element.Text>
             <h2>Effortless Growth, Designed for You </h2>
             <p>
@@ -227,8 +227,8 @@ export function Home() {
       </Element.Section>
 
       {/* Section 9 */}
-      <Element.Section className="beige">
-        <Element.Content>
+      <Element.Section >
+        <Element.Content className="blue">
           <Element.Image src={section9} alt="Success Stories" />
           <Element.Text>
             <h2>Proven Success Stories</h2>
@@ -262,8 +262,8 @@ export function Home() {
       </Element.Section>
 
        {/* Section 10 */}
-       <Element.Section className="blue">
-        <Element.Content>
+       <Element.Section >
+        <Element.Content className="blue">
           <Element.Text>
             <h2>Ready to Unlock Scalable Growth for Your Business?</h2>
             <p>
@@ -288,13 +288,17 @@ export function Home() {
       </Element.Section>
 
       {/* Footer CTA */}
-      <Element.Section className="red" >
-        <Element.Button>
-          <Phone size={24} /> Schedule Your Call Now
-        </Element.Button>
-        <h2>Marketing.xyz – Driving Real Growth, One Lead at a Time</h2>
-        <p>Copyright 2025 Marketing.xyz, LLC. All rights reserved.</p>
-      </Element.Section>
+      <Element.FooterContent>
+        <Element.Footer >
+          <Element.Button>
+            <Phone size={24} /> Schedule Your Call Now
+          </Element.Button>
+          <Element.Copyright>
+          <h2>Marketing.xyz – Driving Real Growth, One Lead at a Time</h2>
+          <p>Copyright 2025 Marketing.xyz, LLC. All rights reserved.</p>
+          </Element.Copyright>
+        </Element.Footer>
+      </Element.FooterContent>
     </Element.Container>
   );
 }
