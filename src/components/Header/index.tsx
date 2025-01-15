@@ -1,5 +1,6 @@
 import * as Element from './styles'
-import marketing from '../../assets/marketing.xyz-logo (1).png'
+
+import marketing from '../../assets/marketing.xyz-logo.png'
 
 export function Header() {
 
@@ -8,6 +9,7 @@ export function Header() {
       <Element.Content>
         <Element.Logo>
           <img src={marketing} />
+          
         </Element.Logo>
         <Element.Title>
           Driving Real <strong>Growth</strong>, <br />One Lead at a <strong>Time</strong>
