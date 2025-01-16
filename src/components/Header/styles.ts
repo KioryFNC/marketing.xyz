@@ -14,6 +14,16 @@ export const Root = styled.div`
   background-position: center 80%;
   border-radius: 0 0 10px 10px;
   text-shadow: 0 2px 4px rgb(0, 0, 0);
+  opacity: 0;
+  transform: translateY(-10rem);
+  animation: slideInFromTop 1s forwards;
+
+  @keyframes slideInFromTop {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &::before {
     content: '';
@@ -92,7 +102,7 @@ export const Logo = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 6rem;
+  font-size: 5rem;
   color: ${(props) => props.theme['white']};
   display: inline-block; /* Garante que o título seja tratado como um bloco de texto */
   white-space: nowrap; /* Impede que a frase que você não quer quebre, exceto no <br> */
