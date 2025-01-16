@@ -6,6 +6,7 @@ export const Root = styled.div`
   width: 100%;
   height: 60rem;
   display: flex;
+  margin-bottom: 10rem;
   align-items: center; 
   justify-content: center; 
   background: url(${BusinessImg}) no-repeat center;
@@ -69,7 +70,7 @@ export const Content = styled.div`
 
 export const Logo = styled.div`
   img {
-    height: 20rem;
+    height: 22rem;
 
     @media (max-width: 1600px) {
       height: 16rem;

@@ -7,7 +7,6 @@ export const Container = styled.div`
 export const Section = styled.section`
   padding: 2rem;
   margin: 1rem 0;
-  background-color: ${(props) => props.theme['beige']};
 
   display: flex;
   flex-direction: column;
@@ -15,9 +14,29 @@ export const Section = styled.section`
   align-items: center;
   gap: 2rem;
 
+  &:nth-child(odd) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &:nth-child(even) {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
   @media (min-width: 900px) {
     padding: 3rem;
     flex-direction: row;
+    align-items: flex-start;
+
+    &:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    &:nth-child(even) {
+      justify-content: flex-end;
+    }
+
   }
 `;
 
@@ -124,6 +143,7 @@ export const Text = styled.div`
   font-size: 1.6rem;
   color: ${({ theme }) => theme['gray']};
 
+
   h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -149,6 +169,10 @@ export const Text = styled.div`
     }
   }
 
+  blockquote {
+    margin-top: 5rem;
+  }
+
   blockquote, cite {
     color: ${({ theme }) => theme['white']};
 
@@ -162,9 +186,9 @@ export const Button = styled.button`
   padding: 1rem 2rem;
   background: ${({ theme }) => theme['red']};
   color: ${({ theme }) => theme['white']};
-  font-size: 1.8rem;
+  font-size: 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;

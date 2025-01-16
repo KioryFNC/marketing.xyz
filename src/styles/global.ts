@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: ${(props) => props.theme['beige']};
+    background: linear-gradient(90deg,#F6E8C3 0%,rgb(238, 216, 155) 50%, #F6E8C3 100%);
   }
 
   body, input, textarea, button{

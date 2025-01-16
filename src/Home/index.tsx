@@ -1,6 +1,6 @@
 import { Header } from '../components/Header';
 import * as Element from './styles';
-import { BookOpen, ChartBar, Check, Globe, Lightning, Phone } from 'phosphor-react';
+import { ArrowSquareDown, ArrowUp, FileText, Fingerprint, GearSix, Phone, Rocket, Star, Trophy } from 'phosphor-react';
 import section1 from '../assets/section1.jpg'
 import section2 from '../assets/section2.jpg'
 import section3 from '../assets/section3.jpg'
@@ -19,14 +19,14 @@ export function Home() {
       <Header />
 
       {/* Section 1 */}
-      <Element.Section >
+      <Element.Section className='odd'>
         <Element.Content className="blue">
           <Element.Image src={section1} alt="High-Intent Leads" />
           <Element.Text>
             <h2>High-Intent Leads Delivered Directly to Your Pipeline</h2>
             <p>
-            Take the guesswork out of lead generation. We connect you with high-intent prospects who are genuinely 
-            interested in what you offer, helping you grow your sales pipeline with ease. 
+              Take the guesswork out of lead generation. We connect you with high-intent prospects who are genuinely 
+              interested in what you offer, helping you grow your sales pipeline with ease. 
             </p>
             <strong>Let’s talk about how we can deliver the leads your business needs.</strong>
             <Element.Button>
@@ -37,7 +37,7 @@ export function Home() {
       </Element.Section>
 
       {/* Section 2 */}
-      <Element.Section >
+      <Element.Section className='even'>
         <Element.Content className="blue">
           <Element.Text>
             <h2>We Deliver Results, Not Promises</h2>
@@ -46,13 +46,13 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Lightning size={20} /> <strong>Entrepreneur-Led Expertise:</strong> Founded by seasoned entrepreneurs with proven lead generation success.
+                <Trophy size={20} /> <strong>Entrepreneur-Led Expertise:</strong> Founded by seasoned entrepreneurs with proven lead generation success.
               </li>
               <li>
-                <ChartBar size={20} /> <strong>Performance-Based Model:</strong> No upfront costs—we succeed only when you do.
+                <Trophy size={20} /> <strong>Performance-Based Model:</strong> No upfront costs—we succeed only when you do.
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Comprehensive Approach:</strong> From SEO to PPC campaigns and high-value content creation, we manage it all.
+                <Trophy size={20} /> <strong>Comprehensive Approach:</strong> From SEO to PPC campaigns and high-value content creation, we manage it all.
               </li>
             </ul>
           </Element.Text>
@@ -61,7 +61,7 @@ export function Home() {
       </Element.Section>
 
       {/* Section 3 */}
-      <Element.Section >
+      <Element.Section className='odd'>
         <Element.Content className="blue">
           <Element.Image src={section3} alt="We Deliver Results" />
           <Element.Text>
@@ -71,19 +71,19 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Lightning size={20} /> <strong>Content Creation: </strong>High-value gated content, articles, and blog posts to attract and convert leads. 
+                <GearSix size={20} /> <strong>Content Creation: </strong>High-value gated content, articles, and blog posts to attract and convert leads. 
               </li>
               <li>
-                <ChartBar size={20} /> <strong>Design & Development: </strong> Professional assets and optimized landing pages for maximum engagement. 
+                <GearSix size={20} /> <strong>Design & Development: </strong> Professional assets and optimized landing pages for maximum engagement. 
               </li>
               <li>
-                <BookOpen size={20} /> <strong>PPC Campaigns: </strong>Targeted paid search to drive qualified leads.
+                <GearSix size={20} /> <strong>PPC Campaigns: </strong>Targeted paid search to drive qualified leads.
               </li>
               <li>
-                <BookOpen size={20} /> <strong>SEO & Social Media: </strong>Organic strategies to attract quality traffic and generate leads.
+                <GearSix size={20} /> <strong>SEO & Social Media: </strong>Organic strategies to attract quality traffic and generate leads.
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Real-Time Optimization: </strong>Ongoing analysis and adjustments for peak performance and ROI.
+                <GearSix size={20} /> <strong>Real-Time Optimization: </strong>Ongoing analysis and adjustments for peak performance and ROI.
               </li>
             </ul>
           </Element.Text>
@@ -91,7 +91,7 @@ export function Home() {
       </Element.Section>
 
       {/* Section 4 */}
-      <Element.Section >
+      <Element.Section className='even'>
         <Element.Content className="blue">
           <Element.Text>
             <h2>Why Choose Marketing.xyz?</h2>
@@ -100,13 +100,13 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Globe size={20} /> <strong>Results-Driven Approach: </strong> We handle all aspects of lead generation, from creating lead magnets to executing advertising and SEO campaigns, delivering high-quality leads that align with your goals.
+                <Star size={20} /> <strong>Results-Driven Approach: </strong> We handle all aspects of lead generation, from creating lead magnets to executing advertising and SEO campaigns, delivering high-quality leads that align with your goals.
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Tailored Strategies: </strong> Our campaigns are designed to connect you with prospects who are genuinely interested in the type of products or services you offer. 
+                <Star size={20} /> <strong>Tailored Strategies: </strong> Our campaigns are designed to connect you with prospects who are genuinely interested in the type of products or services you offer. 
               </li>
               <li>
-                <ChartBar size={20} /> <strong>Simplified Growth Solutions: </strong> With all the heavy lifting managed by our team, you can focus entirely on growing your business and closing more deals. 
+                <Star size={20} /> <strong>Simplified Growth Solutions: </strong> With all the heavy lifting managed by our team, you can focus entirely on growing your business and closing more deals. 
               </li>
             </ul>
           </Element.Text>
@@ -115,7 +115,7 @@ export function Home() {
       </Element.Section>
 
       {/* Section 5 */}
-      <Element.Section >
+      <Element.Section className='odd'>
         <Element.Content className="blue">
           <Element.Image src={section5} alt="Tailored Content for High-Intent Lead Capture " />
           <Element.Text>
@@ -125,31 +125,31 @@ export function Home() {
             </p>
             <ul>
               <li>
-              <Check size={24}/> <strong>Guides and eBooks</strong> 
+              <FileText size={24}/> <strong>Guides and eBooks</strong> 
               </li>
               <li>
-              <Check size={24}/> <strong>Industry Insights Reports</strong> 
+              <FileText size={24}/> <strong>Industry Insights Reports</strong> 
               </li>
               <li>
-                <Check size={24}/> <strong>Infographics & Visual Guides </strong> 
+                <FileText size={24}/> <strong>Infographics & Visual Guides </strong> 
               </li>
               <li>
-                 <Check size={24}/> <strong>Glossary of Industry Terms</strong>
+                 <FileText size={24}/> <strong>Glossary of Industry Terms</strong>
               </li>
               <li>
-                <Check size={24}/> <strong>Checklist for Best Practices</strong> 
+                <FileText size={24}/> <strong>Checklist for Best Practices</strong> 
               </li>
               <li>
-                <Check size={24}/> <strong>Trend Spotting Forecast </strong> 
+                <FileText size={24}/> <strong>Trend Spotting Forecast </strong> 
               </li>
               <li>
-                <Check size={24}/> <strong>Templates and Toolkits </strong>
+                <FileText size={24}/> <strong>Templates and Toolkits </strong>
               </li>
               <li>
-                <Check size={24}/> <strong>Competitive Landscape </strong> 
+                <FileText size={24}/> <strong>Competitive Landscape </strong> 
               </li>
               <li>
-                <Check size={24}/> <strong>Whitepapers </strong> 
+                <FileText size={24}/> <strong>Whitepapers </strong> 
               </li>
             </ul>
           </Element.Text>
@@ -157,7 +157,7 @@ export function Home() {
       </Element.Section>
 
          {/* Section 6 */}
-         <Element.Section>
+         <Element.Section className='even'>
         <Element.Content className="blue">
           <Element.Text>
             <h2>How We Deliver High-Quality Leads</h2>
@@ -166,14 +166,14 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Globe size={20} /> <strong>Precise Market Targeting: </strong> We start by understanding your ideal customer profile and identifying high-intent prospects in your market. 
+                <Rocket size={20} /> <strong>Precise Market Targeting: </strong> We start by understanding your ideal customer profile and identifying high-intent prospects in your market. 
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Customized Campaign Execution: </strong> We take the time to understand your audience, creating and running campaigns tailored to their interests, 
+                <Rocket size={20} /> <strong>Customized Campaign Execution: </strong> We take the time to understand your audience, creating and running campaigns tailored to their interests, 
                 leveraging insights from advertising, SEO, and lead magnets. 
               </li>
               <li>
-                <ChartBar size={20} /> <strong>All-Inclusive Management:</strong>From strategy to execution, we handle every detail, delivering leads while you focus on closing deals. 
+                <Rocket size={20} /> <strong>All-Inclusive Management:</strong>From strategy to execution, we handle every detail, delivering leads while you focus on closing deals. 
               </li>
             </ul>
           </Element.Text>
@@ -182,7 +182,7 @@ export function Home() {
       </Element.Section>
 
          {/* Section 7 */}
-         <Element.Section >
+         <Element.Section className='odd'>
         <Element.Content className="blue">
           <Element.Image src={section7} alt="What Sets Us Apart?" />
           <Element.Text>
@@ -192,13 +192,13 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Globe size={20} /> <strong>High-Intent Leads: </strong>The high-intent leads we generate provide a solid starting point for building meaningful connections. 
+                <ArrowSquareDown size={20} /> <strong>High-Intent Leads: </strong>The high-intent leads we generate provide a solid starting point for building meaningful connections. 
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Complete Service: </strong> We take care of everything needed to generate leads, so you can stay focused on growing your business.  
+                <ArrowSquareDown size={20} /> <strong>Complete Service: </strong> We take care of everything needed to generate leads, so you can stay focused on growing your business.  
               </li>
               <li>
-                <ChartBar size={20} /> <strong>Success-Based Partnership: </strong>With our results-driven model, you pay only for the leads we deliver, ensuring value every step of the way.
+                <ArrowSquareDown size={20} /> <strong>Success-Based Partnership: </strong>With our results-driven model, you pay only for the leads we deliver, ensuring value every step of the way.
               </li>
             </ul>
           </Element.Text>
@@ -206,7 +206,7 @@ export function Home() {
       </Element.Section>
 
          {/* Section 8 */}
-         <Element.Section >
+         <Element.Section className='even'>
         <Element.Content className="blue">
           <Element.Text>
             <h2>Effortless Growth, Designed for You </h2>
@@ -215,10 +215,10 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Globe size={20} /> <strong>Hands-Off Convenience: </strong> We manage the strategy, content, advertising, and optimization, delivering a steady flow of high-quality prospects.
+                <Fingerprint size={20} /> <strong>Hands-Off Convenience: </strong> We manage the strategy, content, advertising, and optimization, delivering a steady flow of high-quality prospects.
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Built to Scale: </strong> Our process adapts to your growth goals, ensuring consistent lead flow whether you're starting small or scaling rapidly.  
+                <Fingerprint size={20} /> <strong>Built to Scale: </strong> Our process adapts to your growth goals, ensuring consistent lead flow whether you're starting small or scaling rapidly.  
               </li>
             </ul>
           </Element.Text>
@@ -227,7 +227,7 @@ export function Home() {
       </Element.Section>
 
       {/* Section 9 */}
-      <Element.Section >
+      <Element.Section className='odd'>
         <Element.Content className="blue">
           <Element.Image src={section9} alt="Success Stories" />
           <Element.Text>
@@ -242,7 +242,7 @@ export function Home() {
             </blockquote>
             <cite>
               <strong>— Alex J., </strong> VP of Sales at a <strong>Mid-Sized B2B Firm</strong>
-            </cite>
+            </cite> 
             <blockquote>
             "The team at Marketing.xyz took care of everything—from content to campaigns. Their performance-based 
             model meant we only paid when results came in. It’s a win-win!"
@@ -262,7 +262,7 @@ export function Home() {
       </Element.Section>
 
        {/* Section 10 */}
-       <Element.Section >
+       <Element.Section className='even'>
         <Element.Content className="blue">
           <Element.Text>
             <h2>Ready to Unlock Scalable Growth for Your Business?</h2>
@@ -273,13 +273,13 @@ export function Home() {
             </p>
             <ul>
               <li>
-                <Lightning size={20} /> <strong>High-Intent Leads </strong>  that match your ideal customer profile.
+                <ArrowUp size={20} /> <strong>High-Intent Leads </strong>  that match your ideal customer profile.
               </li>
               <li>
-                <ChartBar size={20} /> <strong>Custom Campaigns </strong> designed to engage and convert your audience. 
+                <ArrowUp size={20} /> <strong>Custom Campaigns </strong> designed to engage and convert your audience. 
               </li>
               <li>
-                <BookOpen size={20} /> <strong>Actionable Insights </strong> to optimize performance and scale effectively. 
+                <ArrowUp size={20} /> <strong>Actionable Insights </strong> to optimize performance and scale effectively. 
               </li>
             </ul>
           </Element.Text>
